@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "uberlog.Logbook" }, { "v" : 1, "unique" : true, "key" : { "name" : 1, "parent" : 1 }, "name" : "name_1_parent_1", "ns" : "uberlog.Logbook" } ] }

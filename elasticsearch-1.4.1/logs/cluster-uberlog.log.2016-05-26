@@ -1,0 +1,75 @@
+[2016-05-26 21:06:29,813][INFO ][node                     ] [uberlog] version[1.4.1], pid[16658], build[89d3241/2014-11-26T15:49:29Z]
+[2016-05-26 21:06:29,814][INFO ][node                     ] [uberlog] initializing ...
+[2016-05-26 21:06:29,821][INFO ][plugins                  ] [uberlog] loaded [], sites [bigdesk, head, HQ]
+[2016-05-26 21:06:32,849][INFO ][node                     ] [uberlog] initialized
+[2016-05-26 21:06:32,850][INFO ][node                     ] [uberlog] starting ...
+[2016-05-26 21:06:32,958][INFO ][transport                ] [uberlog] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/157.26.108.26:9300]}
+[2016-05-26 21:06:32,999][INFO ][discovery                ] [uberlog] cluster-uberlog/XglG2HVQQiKkw2DjsIPO7w
+[2016-05-26 21:06:36,785][INFO ][cluster.service          ] [uberlog] new_master [uberlog][XglG2HVQQiKkw2DjsIPO7w][MacBook-Pro-de-wassim.local][inet[/157.26.108.26:9300]], reason: zen-disco-join (elected_as_master)
+[2016-05-26 21:06:36,802][INFO ][http                     ] [uberlog] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/157.26.108.26:9200]}
+[2016-05-26 21:06:36,802][INFO ][node                     ] [uberlog] started
+[2016-05-26 21:06:36,814][INFO ][gateway                  ] [uberlog] recovered [0] indices into cluster_state
+[2016-05-26 21:10:40,206][INFO ][node                     ] [uberlog] stopping ...
+[2016-05-26 21:10:40,237][INFO ][node                     ] [uberlog] stopped
+[2016-05-26 21:10:40,237][INFO ][node                     ] [uberlog] closing ...
+[2016-05-26 21:10:40,242][INFO ][node                     ] [uberlog] closed
+[2016-05-26 21:15:41,864][INFO ][node                     ] [uberlog] version[1.4.1], pid[16688], build[89d3241/2014-11-26T15:49:29Z]
+[2016-05-26 21:15:41,864][INFO ][node                     ] [uberlog] initializing ...
+[2016-05-26 21:15:41,876][INFO ][plugins                  ] [uberlog] loaded [mongodb-river], sites [bigdesk, head, HQ, river-mongodb]
+[2016-05-26 21:15:44,409][INFO ][node                     ] [uberlog] initialized
+[2016-05-26 21:15:44,409][INFO ][node                     ] [uberlog] starting ...
+[2016-05-26 21:15:44,511][INFO ][transport                ] [uberlog] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/157.26.108.26:9300]}
+[2016-05-26 21:15:44,546][INFO ][discovery                ] [uberlog] cluster-uberlog/lXnSfKtcSdia39OnU_3JOw
+[2016-05-26 21:15:48,326][INFO ][cluster.service          ] [uberlog] new_master [uberlog][lXnSfKtcSdia39OnU_3JOw][MacBook-Pro-de-wassim.local][inet[/157.26.108.26:9300]], reason: zen-disco-join (elected_as_master)
+[2016-05-26 21:15:48,344][INFO ][http                     ] [uberlog] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/157.26.108.26:9200]}
+[2016-05-26 21:15:48,345][INFO ][node                     ] [uberlog] started
+[2016-05-26 21:15:48,352][INFO ][gateway                  ] [uberlog] recovered [0] indices into cluster_state
+[2016-05-26 21:15:50,209][INFO ][cluster.metadata         ] [uberlog] [_river] creating index, cause [auto(index api)], shards [1]/[1], mappings [uberlogLogbook]
+[2016-05-26 21:15:50,524][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlogLogbook] (dynamic)
+[2016-05-26 21:15:51,552][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river uberlogLogbook
+[2016-05-26 21:15:51,561][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.4] - hash[7472875] - time[2014-11-11T13:26:19Z]
+[2016-05-26 21:15:51,562][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [true], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [uberlog], collection [Logbook], script [null], indexing to [uberlogLogbook]/[Logbook2]
+[2016-05-26 21:15:51,562][INFO ][river.mongodb.util       ] setRiverStatus called with uberlogLogbook - RUNNING
+[2016-05-26 21:15:51,587][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlogLogbook] (dynamic)
+[2016-05-26 21:15:51,601][DEBUG][action.admin.indices.create] [uberlog] [uberlogLogbook] failed to create
+org.elasticsearch.indices.InvalidIndexNameException: [uberlogLogbook] Invalid index name [uberlogLogbook], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:182)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:559)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$200(MetaDataCreateIndexService.java:87)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:243)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:329)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:153)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-26 21:15:51,606][ERROR][org.elasticsearch.river.mongodb.MongoDBRiver] failed to create index [uberlogLogbook], disabling river...
+org.elasticsearch.indices.InvalidIndexNameException: [uberlogLogbook] Invalid index name [uberlogLogbook], must be lowercase
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:182)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:559)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$200(MetaDataCreateIndexService.java:87)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:243)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:329)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:153)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-05-26 21:15:51,617][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlogLogbook] (dynamic)
+[2016-05-26 21:19:59,488][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlog] (dynamic)
+[2016-05-26 21:19:59,504][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Starting river uberlog
+[2016-05-26 21:19:59,507][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] MongoDB River Plugin - version[2.0.4] - hash[7472875] - time[2014-11-11T13:26:19Z]
+[2016-05-26 21:19:59,507][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] starting mongodb stream. options: secondaryreadpreference [true], drop_collection [false], include_collection [], throttlesize [5000], gridfs [false], filter [null], db [uberlog], collection [Logbook], script [null], indexing to [uberlog]/[Logbook2]
+[2016-05-26 21:19:59,507][INFO ][river.mongodb.util       ] setRiverStatus called with uberlog - RUNNING
+[2016-05-26 21:19:59,512][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlog] (dynamic)
+[2016-05-26 21:19:59,536][INFO ][cluster.metadata         ] [uberlog] [uberlog] creating index, cause [api], shards [5]/[1], mappings []
+[2016-05-26 21:19:59,607][INFO ][river.mongodb            ] [uberlog] Creating MongoClient for [[127.0.0.1:27017]]
+[2016-05-26 21:20:00,146][INFO ][org.elasticsearch.river.mongodb.MongoConfigProvider] MongoDB version - 2.6.5
+[2016-05-26 21:20:00,163][INFO ][org.elasticsearch.river.mongodb.CollectionSlurper] MongoDBRiver is beginning initial import of uberlog.Logbook
+[2016-05-26 21:20:00,170][INFO ][org.elasticsearch.river.mongodb.CollectionSlurper] Number of documents indexed in initial import of uberlog.Logbook: 8
+[2016-05-26 21:20:00,217][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlog] (dynamic)
+[2016-05-26 21:20:00,224][INFO ][cluster.metadata         ] [uberlog] [uberlog] update_mapping [Logbook2] (dynamic)
+[2016-05-26 21:20:00,682][INFO ][cluster.metadata         ] [uberlog] [_river] update_mapping [uberlog] (dynamic)
+[2016-05-26 21:20:38,695][INFO ][cluster.metadata         ] [uberlog] [_river] deleting index
+[2016-05-26 21:20:38,711][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river uberlogLogbook
+[2016-05-26 21:20:38,714][INFO ][org.elasticsearch.river.mongodb.MongoDBRiver] Closing river uberlog
+[2016-05-26 21:20:38,715][INFO ][org.elasticsearch.river.mongodb.Indexer] river-mongodb indexer interrupted
+[2016-05-26 21:20:40,877][INFO ][org.elasticsearch.river.mongodb.OplogSlurper] river-mongodb slurper interrupted

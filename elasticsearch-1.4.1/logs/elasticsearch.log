@@ -1,0 +1,30 @@
+[2016-05-26 20:46:20,219][INFO ][node                     ] [Eros] version[1.4.1], pid[16610], build[89d3241/2014-11-26T15:49:29Z]
+[2016-05-26 20:46:20,220][INFO ][node                     ] [Eros] initializing ...
+[2016-05-26 20:46:20,224][INFO ][plugins                  ] [Eros] loaded [], sites []
+[2016-05-26 20:46:22,783][INFO ][node                     ] [Eros] initialized
+[2016-05-26 20:46:22,784][INFO ][node                     ] [Eros] starting ...
+[2016-05-26 20:46:22,865][INFO ][transport                ] [Eros] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/157.26.108.26:9300]}
+[2016-05-26 20:46:22,888][INFO ][discovery                ] [Eros] elasticsearch/pXy_keU5T0Cb7aqVwlHUZQ
+[2016-05-26 20:46:26,667][INFO ][cluster.service          ] [Eros] new_master [Eros][pXy_keU5T0Cb7aqVwlHUZQ][MacBook-Pro-de-wassim.local][inet[/157.26.108.26:9300]], reason: zen-disco-join (elected_as_master)
+[2016-05-26 20:46:26,685][INFO ][http                     ] [Eros] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/157.26.108.26:9200]}
+[2016-05-26 20:46:26,685][INFO ][node                     ] [Eros] started
+[2016-05-26 20:46:26,699][INFO ][gateway                  ] [Eros] recovered [0] indices into cluster_state
+[2016-05-26 20:47:28,805][INFO ][node                     ] [Eros] stopping ...
+[2016-05-26 20:47:28,847][INFO ][node                     ] [Eros] stopped
+[2016-05-26 20:47:28,848][INFO ][node                     ] [Eros] closing ...
+[2016-05-26 20:47:28,857][INFO ][node                     ] [Eros] closed
+[2016-05-26 20:50:38,259][INFO ][node                     ] [Plasma] version[1.4.1], pid[16639], build[89d3241/2014-11-26T15:49:29Z]
+[2016-05-26 20:50:38,260][INFO ][node                     ] [Plasma] initializing ...
+[2016-05-26 20:50:38,268][INFO ][plugins                  ] [Plasma] loaded [], sites [bigdesk, head, HQ]
+[2016-05-26 20:50:41,077][INFO ][node                     ] [Plasma] initialized
+[2016-05-26 20:50:41,078][INFO ][node                     ] [Plasma] starting ...
+[2016-05-26 20:50:41,244][INFO ][transport                ] [Plasma] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/157.26.108.26:9300]}
+[2016-05-26 20:50:41,279][INFO ][discovery                ] [Plasma] elasticsearch/KgpnjGLmS2CJfhAFaoJOQw
+[2016-05-26 20:50:45,062][INFO ][cluster.service          ] [Plasma] new_master [Plasma][KgpnjGLmS2CJfhAFaoJOQw][MacBook-Pro-de-wassim.local][inet[/157.26.108.26:9300]], reason: zen-disco-join (elected_as_master)
+[2016-05-26 20:50:45,081][INFO ][http                     ] [Plasma] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/157.26.108.26:9200]}
+[2016-05-26 20:50:45,081][INFO ][node                     ] [Plasma] started
+[2016-05-26 20:50:45,089][INFO ][gateway                  ] [Plasma] recovered [0] indices into cluster_state
+[2016-05-26 20:54:22,573][INFO ][node                     ] [Plasma] stopping ...
+[2016-05-26 20:54:22,594][INFO ][node                     ] [Plasma] stopped
+[2016-05-26 20:54:22,594][INFO ][node                     ] [Plasma] closing ...
+[2016-05-26 20:54:22,599][INFO ][node                     ] [Plasma] closed
