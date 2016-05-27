@@ -1,0 +1,500 @@
+   10  ls
+   11  mkdir -p /data/rs0/db1 /data/rs0/log1
+   12  sudo mkdir -p /data/rs0/db1 /data/rs0/log1
+   13  mongod --port 27018 --dbpath /data/rs0/db1 --logpath /data/rs0/log1 --replSet rs0 --smallfiles --oplogSize 128 &
+   14  /Users/wassimajjali/Desktop/p3_bachelor/elasticsearch-1.4.1/bin/elasticsearch ; exit;
+   15  mkdir -p /data/rs0/db2 /data/rs0/log2
+   16  sudo mkdir -p /data/rs0/db2 /data/rs0/log2
+   17  mongod --port 27019 --dbpath /data/rs0/db2 --logpath /data/rs0/log2 --replSet rs0 --smallfiles --oplogSize 1 &
+   18  pwd
+   19  cd ..
+   20  cd ..
+   21  launchctl list | grep elasticsearch
+   22  cd ..
+   23  launchctl list | grep elasticsearch
+   24  launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
+   25  brew uninstall elasticsearch
+   26  ls -al /usr/local/bin/elasticsearch*
+   27  ls -al ~/Library/LaunchAgents
+   28  cd Desktop/
+   29  cd p3_bachelor/
+   30  cd elasticsearch-1.4.1
+   31  cd bin/
+   32  ls
+   33  elasticsearch
+   34  elasticsearch
+   35  ls
+   36  elasticsearch
+   37  sudo elasticsearch
+   38  sudo elasticsearch
+   39  pwd
+   40  ls
+   41  elasticsearch
+   42  elasticsearch
+   43  elasticsearch start
+   44  curl -X GET http://localhost:9200
+   45  curl -X GET http://localhost:9200
+   46  cd ..
+   47  /bin/elasticsearch -d
+   48  bin/elasticsearch -d
+   49  ls
+   50  mongo
+   51  sudo mongo
+   52  cd ..
+   53  bin/mongo
+   54  bin/mongodump --db uberlog
+   55  bin/mongorestore /Users/wassimajjali/Desktop/p3_bachelor/mongodb-osx-x86_64-2.6.5/uberlog 
+   56  bin/elasticsearch -d -p pid
+   57  cd Desktop/
+   58  cd p3_bachelor/
+   59  cd elasticsearch-1.4.1
+   60  bin/elasticsearch -d -p pid
+   61  kill `cat pid`
+   62  bin/elasticsearch
+   63  bin/elasticsearch
+   64  bin/plugin -install mobz/elasticsearch-head
+   65  bin/plugin -install lukas-vlcek/bigdesk
+   66  bin/plugin -install royrusso/elasticsearch-HQ
+   67  launchctl list | grep mongo
+   68  launchctl remove homebrew.mxcl.mongodb
+   69  pkill -f mongod
+   70  brew uninstall mongodb
+   71  plugin.bat --install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.4
+   72  bin/plugin -install royrusso/elasticsearch-HQ-install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.4
+   73  plugin.bat --install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.4
+   74  plugin --install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.4
+   75  ls
+   76  plugins -install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.4
+   77  bin/plugin --install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.4
+   78  bin/elasticsearch
+   79  bin/elasticsearch
+   80  bin/elasticsearch
+   81  bin/elasticsearch
+   82  cd ..
+   83  cd uberlog
+   84  bin/elasticsearch
+   85  bin/elasticsearch
+   86  cd ..
+   87  cd elasticsearch-1.4.1
+   88  bin/elasticsearch
+   89  bin/elasticsearch
+   90  cd ..
+   91  ls
+   92  cd elasticsearch-1.4.1
+   93  ls
+   94  cd bin/
+   95  elasticsearch
+   96  cd ..
+   97  bin/elasticsearch
+   98  curl -XPUT "localhost:9200/_river/testUberlog/_meta" -d '
+   99  {
+  100    "type": "mongodb",
+  101    "mongodb": {
+  102       "servers": [
+  103         { "host": "127.0.0.1", "port": 27017 }
+  104       ],
+  105      "options": { "secondary_read_preference": true},
+  106      "db": "uberlog",
+  107      "collection": "Logbook"
+  108    },
+  109   "index": {
+  110     "name": "testUberlog",
+  111     "type": "testLogbook"
+  112   }
+  113  }'
+  114  curl -XPUT "localhost:9200/_river/testUberlog/_meta" -d '
+  115  {
+  116    "type": "mongodb",
+  117    "mongodb": {
+  118       "servers": [
+  119         { "host": "127.0.0.1", "port": 27017 }
+  120       ],
+  121      "options": { "secondary_read_preference": true},
+  122      "db": "uberlog",
+  123      "collection": "Logbook"
+  124    },
+  125   "index": {
+  126     "name": "testUberlog",
+  127     "type": "testLogbook"
+  128   }
+  129  }'
+  130  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  131  {
+  132    "type": "mongodb",
+  133    "mongodb": {
+  134       "servers": [
+  135         { "host": "127.0.0.1", "port": 27017 }
+  136       ],
+  137      "options": { "secondary_read_preference": true},
+  138      "db": "uberlog",
+  139      "collection": "Logbook"
+  140    },
+  141   "index": {
+  142     "name": "blog2",
+  143     "type": "city2"
+  144   }
+  145  }'
+  146  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  147  {
+  148    "type": "mongodb",
+  149    "mongodb": {
+  150       "servers": [
+  151         { "host": "127.0.0.1", "port": 27017 }
+  152       ],
+  153      "options": { "secondary_read_preference": true},
+  154      "db": "uberlog",
+  155      "collection": "Logbook"
+  156    },
+  157   "index": {
+  158     "name": "blog2",
+  159     "type": "city2"
+  160   }
+  161  }'
+  162  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  163  {
+  164    "type": "mongodb",
+  165    "mongodb": {
+  166       "servers": [
+  167         { "host": "127.0.0.1", "port": 27017 }
+  168       ],
+  169      "options": { "secondary_read_preference": true},
+  170      "db": "uberlog",
+  171      "collection": "Logbook"
+  172    },
+  173   "index": {
+  174     "name": "blog2",
+  175     "type": "city2"
+  176   }
+  177  }'
+  178  curl -XPUT "localhost:9200/_river/uberlog2/_meta" -d '
+  179  {
+  180    "type": "mongodb",
+  181    "mongodb": {
+  182       "servers": [
+  183         { "host": "127.0.0.1", "port": 27017 }
+  184       ],
+  185      "options": { "secondary_read_preference": true},
+  186      "db": "uberlog",
+  187      "collection": "Logbook"
+  188    },
+  189   "index": {
+  190     "name": "uberlog2",
+  191     "type": "Logbook2"
+  192   }
+  193  }'
+  194  curl -XPUT "localhost:9200/_river/uberlog2/_meta" -d '
+  195  {
+  196    "type": "mongodb",
+  197    "mongodb": {
+  198       "servers": [
+  199         { "host": "127.0.0.1", "port": 27017 }
+  200       ],
+  201      "options": { "secondary_read_preference": true},
+  202      "db": "uberlog",
+  203      "collection": "Logbook"
+  204    },
+  205   "index": {
+  206     "name": "uberlog2",
+  207     "type": "Logbook2"
+  208   }
+  209  }'
+  210  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  211  {
+  212    "type": "mongodb",
+  213    "mongodb": {
+  214       "servers": [
+  215         { "host": "127.0.0.1", "port": 27017 }
+  216       ],
+  217      "options": { "secondary_read_preference": true},
+  218      "db": "testblog",
+  219      "collection": "city"
+  220    },
+  221   "index": {
+  222     "name": "blog2",
+  223     "type": "city2"
+  224   }
+  225  }'
+  226  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  227  {
+  228    "type": "mongodb",
+  229    "mongodb": {
+  230       "servers": [
+  231         { "host": "127.0.0.1", "port": 27017 }
+  232       ],
+  233      "options": { "secondary_read_preference": true},
+  234      "db": "testblog",
+  235      "collection": "city"
+  236    },
+  237   "index": {
+  238     "name": "blog2",
+  239     "type": "city2"
+  240   }
+  241  curl -XPUT "localhost:9200/_river/blog3/_meta" -d '
+  242  {
+  243    "type": "mongodb",
+  244    "mongodb": {
+  245       "servers": [
+  246         { "host": "127.0.0.1", "port": 27017 }
+  247       ],
+  248      "options": { "secondary_read_preference": true},
+  249      "db": "uberlog",
+  250      "collection": "Logbook"
+  251    },
+  252   "index": {
+  253     "name": "blog3",
+  254     "type": "logbook"
+  255   }
+  256  }'
+  257  curl -XPUT "localhost:9200/_river/blog3/_meta" -d '
+  258  {
+  259    "type": "mongodb",
+  260    "mongodb": {
+  261       "servers": [
+  262         { "host": "127.0.0.1", "port": 27017 }
+  263       ],
+  264      "options": { "secondary_read_preference": true},
+  265      "db": "uberlog",
+  266      "collection": "Logbook"
+  267    },
+  268   "index": {
+  269     "name": "blog3",
+  270     "type": "logbook"
+  271   }
+  272  }'
+  273  curl -XPUT "localhost:9200/_river/blog3/_meta" -d '
+  274  {
+  275    "type": "mongodb",
+  276    "mongodb": {
+  277       "servers": [
+  278         { "host": "127.0.0.1", "port": 27017 }
+  279       ],
+  280      "options": { "secondary_read_preference": true},
+  281      "db": "uberlog",
+  282      "collection": "Logbook"
+  283    },
+  284   "index": {
+  285     "name": "blog3",
+  286     "type": "logbook"
+  287   }
+  288  }'
+  289  curl -XPUT "localhost:9200/blog2/account/_meta" -d '
+  290  {
+  291    "type": "mongodb",
+  292    "mongodb": {
+  293       "servers": [
+  294         { "host": "127.0.0.1", "port": 27017 }
+  295       ],
+  296      "options": { "secondary_read_preference": true},
+  297      "db": "uberlog",
+  298      "collection": "Account"
+  299    },
+  300   "index": {
+  301     "name": "acountUberlog",
+  302     "type": "account"
+  303   }
+  304  }'
+  305  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  306  {
+  307    "type": "mongodb",
+  308    "mongodb": {
+  309       "servers": [
+  310         { "host": "127.0.0.1", "port": 27017 }
+  311       ],
+  312      "options": { "secondary_read_preference": true},
+  313      "db": "uberlog",
+  314      "collection": "Account"
+  315    },
+  316   "index": {
+  317     "name": "blog2",
+  318     "type": "city2"
+  319   }
+  320  }'
+  321  curl -XPUT "localhost:9200/blog2/account/_meta" -d '
+  322  {
+  323    "type": "mongodb",
+  324    "mongodb": {
+  325       "servers": [
+  326         { "host": "127.0.0.1", "port": 27017 }
+  327       ],
+  328      "options": { "secondary_read_preference": true},
+  329      "db": "uberlog",
+  330      "collection": "Account"
+  331    },
+  332   "index": {
+  333     "name": "acountUberlog",
+  334     "type": "account"
+  335   }
+  336  }'
+  337  curl -XPUT "localhost:9200/_river/account/_meta" -d '
+  338  {
+  339    "type": "mongodb",
+  340    "mongodb": {
+  341       "servers": [
+  342         { "host": "127.0.0.1", "port": 27017 }
+  343       ],
+  344      "options": { "secondary_read_preference": true},
+  345      "db": "uberlog",
+  346      "collection": "Account"
+  347    },
+  348   "index": {
+  349     "name": "account",
+  350     "type": "account"
+  351   }
+  352  }'
+  353  curl -XPUT "localhost:9200/blog2/account/_meta" -d '
+  354  {
+  355    "type": "mongodb",
+  356    "mongodb": {
+  357       "servers": [
+  358         { "host": "127.0.0.1", "port": 27017 }
+  359       ],
+  360      "options": { "secondary_read_preference": true},
+  361      "db": "uberlog",
+  362      "collection": "Account"
+  363    },
+  364   "index": {
+  365     "name": "account",
+  366     "type": "account"
+  367   }
+  368  }'
+  369  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  370  {
+  371    "type": "mongodb",
+  372    "mongodb": {
+  373       "servers": [
+  374         { "host": "127.0.0.1", "port": 27017 }
+  375       ],
+  376      "options": { "secondary_read_preference": true},
+  377      "db": "uberlog",
+  378      "collection": "Account"
+  379    },
+  380   "index": {
+  381     "name": "blog2",
+  382     "type": "city2"
+  383   }
+  384  }'
+  385  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  386  {
+  387    "type": "mongodb",
+  388    "mongodb": {
+  389       "servers": [
+  390         { "host": "127.0.0.1", "port": 27017 }
+  391       ],
+  392      "options": { "secondary_read_preference": true},
+  393      "db": "uberlog",
+  394      "collection": "Account"
+  395    },
+  396   "index": {
+  397     "name": "blog2",
+  398     "type": "account2"
+  399   }
+  400  }'
+  401  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  402  {
+  403    "type": "mongodb",
+  404    "mongodb": {
+  405       "servers": [
+  406         { "host": "127.0.0.1", "port": 27017 }
+  407       ],
+  408      "options": { "secondary_read_preference": true},
+  409      "db": "uberlog",
+  410      "collection": "Account"
+  411    },
+  412   "index": {
+  413     "name": "blog2",
+  414     "type": "account2"
+  415   }
+  416  }'
+  417  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  418  {
+  419    "type": "mongodb",
+  420    "mongodb": {
+  421       "servers": [
+  422         { "host": "127.0.0.1", "port": 27017 }
+  423       ],
+  424      "options": { "secondary_read_preference": true},
+  425      "db": "uberlog",
+  426      "collection": "Account"
+  427    },
+  428   "index": {
+  429     "name": "blog2",
+  430     "type": "city2"
+  431   }
+  432  }'
+  433  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  434  {
+  435    "type": "mongodb",
+  436    "mongodb": {
+  437       "servers": [
+  438         { "host": "127.0.0.1", "port": 27017 }
+  439       ],
+  440      "options": { "secondary_read_preference": true},
+  441      "db": "uberlog",
+  442      "collection": "Account"
+  443    },
+  444   "index": {
+  445     "name": "blog2",
+  446     "type": "city2"
+  447   }
+  448  }'
+  449  $ curl -XPOST 'http://localhost:9200/_shutdown'
+  450  curl -XGET 'http://localhost:9200/_nodes'
+  451  curl -XGET 'http://localhost:9200/_nodes/process'
+  452  curl -XGET 'http://localhost:9200/_nodes/process'
+  453  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  454  {
+  455    "type": "mongodb",
+  456    "mongodb": {
+  457       "servers": [
+  458         { "host": "127.0.0.1", "port": 27017 }
+  459       ],
+  460      "options": { "secondary_read_preference": true},
+  461      "db": "uberlog",
+  462      "collection": "Account"
+  463    },
+  464   "index": {
+  465     "name": "blog2",
+  466     "type": "city2"
+  467   }
+  468  }'
+  469  curl -XPUT "localhost:9200/_river/blog2/_meta" -d '
+  470  {
+  471    "type": "mongodb",
+  472    "mongodb": {
+  473       "servers": [
+  474         { "host": "127.0.0.1", "port": 27017 }
+  475       ],
+  476      "options": { "secondary_read_preference": true},
+  477      "db": "uberlog",
+  478      "collection": "Account"
+  479    },
+  480   "index": {
+  481     "name": "blog2",
+  482     "type": "city2"
+  483   }
+  484  }'
+  485  curl -XPUT "localhost:9200/_river/blog5/_meta" -d '
+  486  {
+  487    "type": "mongodb",
+  488    "mongodb": {
+  489       "servers": [
+  490         { "host": "127.0.0.1", "port": 27017 }
+  491       ],
+  492      "options": { "secondary_read_preference": true},
+  493      "db": "uberlog",
+  494      "collection": "Account"
+  495    },
+  496   "index": {
+  497     "name": "blog3",
+  498     "type": "account5"
+  499   }
+  500  }'
+  501  history
+  502  curl -XGET 'http://localhost:9200/_river/Logbbok2/_search?q=Anomalies&pretty=true'
+  503  curl -XGET 'http://localhost:9200/uberlog/Logbbok2/_search?q=Anomalies&pretty=true'
+  504  curl -XGET 'http://localhost:9200/uberlog/Logbook2/_search?q=Anomalies&pretty=true'
+  505  curl -XGET 'http://localhost:9200/uberlog/Logbook2/_mapping?pretty=true'
+  506  curl 'http://localhost:9200/uberlog/_analyze?tokenizer=letter&filters=asciifolding,lowercase&pretty=true' -d "Anomalies"
+  507  curl 'http://localhost:9200/uberlog/_analyze?tokenizer=letter&filters=asciifolding,lowercase&pretty=true' -d "Anomalies"
+  508  curl 'http://localhost:9200/uberlog/_analyze?tokenizer=letter&filters=asciifolding,lowercase&pretty=true' -d "an ies"
+  509  history >> /Users/wassimajjali/Desktop/ElasticsearchMongodb/history.txt
